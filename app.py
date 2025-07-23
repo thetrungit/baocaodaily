@@ -1,10 +1,6 @@
-import os
-
-# Ghi credentials từ biến môi trường nếu chưa có sẵn
-if not os.path.exists("credentials.json"):
-    creds_json = os.environ.get("GOOGLE_CREDS_JSON", "{}")
-    with open("credentials.json", "w") as f:
-        f.write(creds_json)
+import json, os
+creds_dict = json.loads(os.environ["GOOGLE_CREDS"])
+creds = ServiceAccountCredentials.from_json_keyfile_dict(creds_dict, scope)
 import streamlit as st
 import gspread
 import pandas as pd
