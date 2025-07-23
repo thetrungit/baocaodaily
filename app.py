@@ -17,7 +17,7 @@ def get_gspread_client():
 gc = get_gspread_client()
 
 # Thông tin Google Sheet
-sheet_id = "1kJc1rpJ0xdVBEdAQBzYOJYb5Gi9B2fyy"
+sheet_id = "1NNwDEmiF7wIOLsZVQvL0Ae84lNvsFd5B9uJ0yeD8Hf4"
 spreadsheet = gc.open_by_key(sheet_id)
 
 # Giao diện chính
